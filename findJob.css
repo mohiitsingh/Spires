@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
 /* CSS for the card container */
 .cardd-container {
     padding: 20px;
     width: 73%;
-    /* Adjust the width to 60% */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;

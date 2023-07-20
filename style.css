@@ -1,21 +1,14 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Fira+Sans&family=Poppins&display=swap');
-
+*{
+font-family: 'Roboto', sans-serif;
+}
 
 body {
   padding: 0;
   margin: 0;
   background-color: #00b712;
   background: white;
-  /* background: rgb(255,255,255); */
-  /* background: linear-gradient(0deg,   rgba(255, 162, 0, 0.103) 10%, rgb(255, 255, 255) 90%) ; */
-  /* font-family: 'Bodoni Moda', serif; */
-  /* font-family: 'Poppins', sans-serif; */
-
-  font-family: 'Bodoni Moda', serif;
-  font-family: 'Fira Sans', sans-serif;
-  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
@@ -145,9 +138,9 @@ a:hover {
   border: none;
   padding: 10px 20px;
   margin: 12px 8px;
-  font-size: 16px;
+  font-size: 19px;
   cursor: pointer;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-in-out;
   border-radius: 5px;
   font-weight: 600;
 }
@@ -373,22 +366,23 @@ span {
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-
+  transition: 0.2s ease-in-out;
 }
 
 
 .card:hover {
-  border: 2px solid #004602a0;
-  ;
+  /* border: 2px solid #004602a0; */
+  box-shadow: 0 0 5px black;
 }
 
 
 .card h3 {
-  color: rgb(0, 63, 0);
+  /* color: rgb(0, 63, 0); */
 }
 
 .card h4 {
-  color: rgb(0, 113, 0);
+  /* color: rgb(0, 113, 0); */
+  color: rgb(137, 89, 1);
 }
 
 .browse-category {
@@ -421,8 +415,6 @@ span {
 
 
   padding: 20px;
-  /* min-height: 60vh; */
-  /* background-color: pink; */
 
   display: flex;
   flex-wrap: wrap;
@@ -459,10 +451,14 @@ span {
 
 .btn-green {
   border: none;
-  padding: 10px 20px;
-  color: rgb(0, 38, 0);
+  padding: 15px 25px;
   background-color: #ff9500;
-  font-size: 10px;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+.btn-green:hover{
+  transform: scale(1.1);
 }
 
 
@@ -471,7 +467,7 @@ span {
 
 /* CSS for the card */
 .cardd {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   width: calc(33.33% - 20px);
   /* Adjust the width based on the number of cards per row */
   margin-bottom: 20px;
@@ -479,12 +475,14 @@ span {
   border-radius: 5px;
   padding: 20px;
   box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 2px black;
 }
 
 
 .cardd:hover {
-  border: 2px solid #004602a0;
-  ;
+  box-shadow: 0 0 5px black;
+  transform: translateY(-10px);
 }
 
 
@@ -513,6 +511,8 @@ span {
   width: 10px;
   font-size: 10px;
   background-color: rgba(160, 223, 255, 0.61);
+  background-color: black;
+  color: white !important;
   padding: 6px 15px;
   border-radius: 50px;
   /* margin-right: 10px; */
@@ -523,14 +523,13 @@ span {
 
 
 #Private {
-  background-color: rgba(255, 233, 192, 0.747);
-  color: orange;
-
+  /* background-color: rgba(255, 233, 192, 0.747); */
+  /* color: orange; */
+  background-color: orangered;
 }
 
 #Urgent {
-  background-color: rgba(189, 255, 174, 0.76);
-  color: rgb(0, 255, 30);
+  background-color: #00b712;
 }
 
 
@@ -538,10 +537,14 @@ span {
   color: blue;
 }
 
+.span_currency{
+  margin-bottom: 1rem;
+}
+
 .span_currency span {
   /* background-color: chartreuse; */
   /* margin-right: 15px; */
-  font-size: 10px;
+  font-size: 14px;
   word-spacing: 1px;
   margin-left: 2px;
   color: black;
@@ -552,17 +555,11 @@ span {
 
 
 .span_currency i {
-  /* background-color: chartreuse; */
-  /* margin-right: 15px; */
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 2px;
-  /* padding: 4px; */
   padding-left: 2px;
-  color: rgb(0, 47, 0);
-
-
-  /* justify-content: space-between;   */
-
+  /* color: rgb(0, 47, 0); */
+  color: #000000;
 }
 
 
@@ -574,6 +571,7 @@ span {
 
 
 /*  section 3  ends */
+
 
 
 
@@ -639,6 +637,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 /* .text { */
@@ -711,7 +710,6 @@ footer {
   background-color: #ffffff;
   padding: 20px;
   /* border: 1px solid black; */
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-section {
