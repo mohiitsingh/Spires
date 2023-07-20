@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
+  
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Fira+Sans&family=Poppins&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Poppins&display=swap" rel="stylesheet">
+
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      /* height: 100vh; */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+    /* Additional styling for each section */
+    .section1 {
+      /* background-color: #ff0000; */
+
+      height: auto;
+    }
+    .section2 {
+      /* background-color: #00ff00; */
+      height: auto;
+    }
+    .section3 {
+      /* background-color: #0000ff; */
+      height: auto;
+    }
+    .section4 {
+      /* background-color: #ffff00; */
+      /* height: 100vh; */
+    }
+    .section5 {
+      /* background-color: #00ffff; */
+      /* height: 100vh; */
+    }
+
+    .section6 {
+      /* background-color: #ffbe1b; */
+      height: 100vh;
+    }
+
+
+    .section7{
+        /* background-color: #fa4ef1; */
+      height: 100vh;
+    }
+
+
+
+
+
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  /* height: 100%; */
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  /* background: linear-gradient(to left, #000000, #ffffff); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+  position: fixed;
+  width: 100%;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  /* float: left; */
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+
+.logo-div {
+    display: flex;
+}
+
+
+.logo-div2 ul{
+/* background-color: #f46b45; */
+display: flex;
+justify-content: space-between; 
+gap: 22px;
+}
+
+
+.logo{
+    margin-right: 20px;
+}
+
+
+
+ul.menu{
+  padding-top: 10px;
+  
+}
+
+
+
+
+@media (max-width: 700px) {
+
+
+    .logo {
+         margin-right: 44vh;
+    }
+
+    .logo-div2{
+        display: none;
+    }
+
+
+
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+@media (max-width: 480px){
+
+
+
+    .logo {
+         margin-right: 23vh;
+    }
+}
+
+
+
+
+
+@media (max-width: 400px){
+  .logo {
+         margin-right: 22vh;
+    }
+}
+
+@media (max-width: 380px){
+  .logo {
+         margin-right: 20vh;
+    }
+}
+
+
+
+.menu-button {
+margin-top: 40px;
+}
+  
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+      <!-- Navigation Bar -->
+  <!-- <div class="navbar">
+    <a class="logo" href="#">JobTree</a>
+
+    <div class="hamberger-div">
+      <a href="#">Find Internships <i class="fa fa-caret-down"></i></a>
+      <a href="#">Find Jobs <i class="fa fa-caret-down"></i></a>
+      <a href="#">Employers <i class="fa fa-caret-down"></i></a>
+      <a href="#">Candidates <i class="fa fa-caret-down"></i></a>
+      <div class="notification"><i class="fas fa-bell"></i></div>
+      <button class="upload-button">Upload Resume <i class=" fa fa-upload"></i></button>
+    </div> -->
+
+
+    <!--  -->
+
+  
+
+    <!--  -->
+
+  <!-- </div> -->
+
+    
+  <section class="top-nav">
+
+
+    <div class="logo-div">
+
+      <div>
+        <a class="logo" id="logo-spires"><img src="./logo (1).png"  alt=""></a>
+     
+    
+
+      </div>  
+    <!-- <a class="logo" href="#">JobTree</a> -->
+  
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+
+
+  <ul class="menu">
+
+
+    <li><a href="#">Find Internships  </a></li>
+ 
+    <li>      <a href="#">Find Jobs  </a></li>
+    <li>      <a href="#">Employers  </a></li>
+    
+    <li><a href="#">Candidates  </a></li>
+    
+   
+
+    </ul>
+
+
+</div>
+
+
+
+
+
+<div class="logo-div2">
+
+<ul>
+
+    <li style=" list-style: none;">
+        <button class="upload-button">Upload Resume <i class=" fa fa-upload"></i></button>
+        </li>
+<li style=" list-style: none;">       <div class="notification"><i class="fas fa-bell"></i></div></li>
+
+
+
+
+
+
+  </ul>
+
+
+</div>
+</section>
+
+
+
+  <div class="section1">
+
+
+    <div class="outer-section">
+        <div class="inner-section" >
+            <!-- First inner section content here -->
+
+
+
+            <div class="inner-section-div">
+              <h2>Find Your Dream Job With Us</h2>
+
+              <div class="searchbar">
+  
+     
+                <form>
+                    <!-- <label for="jobTitle">Job Title:</label> -->
+                    <input type="text" id="jobTitle" name="jobTitle" placeholder="Job title" style="border-right: 1px solid black;">
+                  
+                    <!-- <label for="jobLocation">Job Location:</label> -->
+                    <input type="text" id="jobLocation" name="jobLocation" placeholder="Job location">
+                  
+                  
+                    <button type="submit" >Search</button>
+                  </form>
+            
+                </div>
+  
+              <!-- <p> <span>Designer</span> <span>Designer</span> <span>Designer</span> <span>Designer</span> <span>Designer</span> <span>Designer</span></p> -->
+            </div>
+
+   
+        </div>
+        <div class="inner-section2" >
+            <!-- Second inner section content here -->
+            <div class="inner-section2-div">
+              <img src="./pngwing.com3.png" alt="">
+            </div>
+            <!-- <h2>Inner Section 2</h2>
+            <p>This is the content of inner section 2.</p> -->
+        </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="section2">
+
+    
+    <div class="browse-category">
+        <h1>Browse By Categories </h1>
+    </div>
+
+  <div class="card-container">
+
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Human Resource</h3>
+      <pre>120 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Software Developer</h3>
+      <pre>100 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Sales Marketing</h3>
+      <pre>120 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Teaching Jobs</h3>
+      <pre>200 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Human Resource</h3>
+      <pre>120 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Human Resource</h3>
+      <pre>120 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Human Resource</h3>
+      <pre>120 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+    <div class="card">
+      <!-- <h3>Card 1</h3> -->
+      <h3>Human Resource</h3>
+      <pre>120 jobs available</pre>
+      <h4>Explore Now > </h4>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div class="btn-jobs">
+    <button class="btn-green">Load More Listing</button>
+  </div>
+
+</div>
+
+
+<!--  section 2 ends -->
+
+
+<div class="section3">
+
+
+
+    <div class="browse-category">
+      <h1>Featured Jobs</h1>
+  </div>
+  
+      <div class="cardd-container">
+          <div class="cardd">
+      
+              <div class="text">
+                  <img src="./soft_eng.png" height="35px" width="35px" alt="">
+                  <pre style="width: 100%;" class="cardd-title">Software Engineer (Android)   </pre> 
+                  <!-- <p><i id="bookmarkid" class="far fa-bookmark"></i></p> -->
+              </div>
+         
+              <div>
+            
+                  <div class="span_currency">
+                      <p class="cardd-description"><i class="fa fa-suitcase"></i><span>Segement</span>   <i class="fa fa-map-marker"aria-hidden="true"></i><span>London, Uk</span>   <i class=" fa fa-regular fa-clock"></i><span>11 Hours ago</span>   <i class="fa fa-solid fa-money-bill-wave"></i><span>10-20$</span>     </p>
+                  </div>
+      
+                  <div class="span_bgwale">
+                      <p class="cardd-description"><span id="FullTime">FullTime</span> <span id="Private">Private</span>  <span id="Urgent">Urgent</span></p>
+                  </div>
+        
+              </div>
+          </div>
+      
+      
+  
+  
+  
+      
+          <div class="cardd">
+      
+            <div class="text">
+                <img src="./soft_eng.png" height="35px" width="35px" alt="">
+                <pre style="width: 100%;" class="cardd-title">Software Engineer (Android)   </pre> 
+                <!-- <p><i id="bookmarkid" class="far fa-bookmark"></i></p> -->
+            </div>
+       
+            <div>
+          
+                <div class="span_currency">
+                    <p class="cardd-description"><i class="fa fa-suitcase"></i><span>Segement</span>   <i class="fa fa-map-marker"aria-hidden="true"></i><span>London, Uk</span>   <i class=" fa fa-regular fa-clock"></i><span>11 Hours ago</span>   <i class="fa fa-solid fa-money-bill-wave"></i><span>10-20$</span>     </p>
+                </div>
+    
+                <div class="span_bgwale">
+                    <p class="cardd-description"><span>FullTime</span> <span id="Private">Private</span>  <span id="Urgent">Urgent</span></p>
+                </div>
+      
+            </div>
+        </div>
+  
+  
+  
+  
+         <div class="cardd">
+      
+              <div class="text">
+                  <img src="./soft_eng.png" height="35px" width="35px" alt="">
+                  <pre style="width: 100%;" class="cardd-title">Software Engineer (Android)   </pre> 
+                  <!-- <p><i id="bookmarkid" class="far fa-bookmark"></i></p> -->
+              </div>
+         
+              <div>
+            
+                  <div class="span_currency">
+                      <p class="cardd-description"><i class="fa fa-suitcase"></i><span>Segement</span>   <i class="fa fa-map-marker"aria-hidden="true"></i><span>London, Uk</span>   <i class=" fa fa-regular fa-clock"></i><span>11 Hoursago</span>   <i class="fa fa-solid fa-money-bill-wave"></i><span>10-20$</span>     </p>
+                  </div>
+      
+                  <div class="span_bgwale">
+                      <p class="cardd-description"><span>FullTime</span> <span id="Private">Private</span>  <span id="Urgent">Urgent</span></p>
+                  </div>
+        
+              </div>
+          </div>
+  
+  
+  
+  
+  
+  
+            <div class="cardd">
+      
+              <div class="text">
+                  <img src="./soft_eng.png" height="35px" width="35px" alt="">
+                  <pre style="width: 100%;" class="cardd-title">Software Engineer (Android)   </pre> 
+                  <!-- <p><i id="bookmarkid" class="far fa-bookmark"></i></p> -->
+              </div>
+         
+              <div>
+            
+                  <div class="span_currency">
+                      <p class="cardd-description"><i class="fa fa-suitcase"></i><span>Segement</span>   <i class="fa fa-map-marker"aria-hidden="true"></i><span>London, Uk</span>   <i class=" fa fa-regular fa-clock"></i><span>11 Hours ago</span>   <i class="fa fa-solid fa-money-bill-wave"></i><span>10-20$</span>     </p>
+                  </div>
+      
+                  <div class="span_bgwale">
+                      <p class="cardd-description"><span>FullTime</span> <span id="Private">Private</span>  <span id="Urgent">Urgent</span></p>
+                  </div>
+        
+              </div>
+          </div>
+  
+  
+  
+          <div class="cardd">
+      
+            <div class="text">
+                <img src="./soft_eng.png" height="35px" width="35px" alt="">
+                <pre style="width: 100%;" class="cardd-title">Software Engineer (Android)   </pre> 
+                <!-- <p><i id="bookmarkid" class="far fa-bookmark"></i></p> -->
+            </div>
+       
+            <div>
+          
+                <div class="span_currency">
+                    <p class="cardd-description"><i class="fa fa-suitcase"></i><span>Segement</span>   <i class="fa fa-map-marker"aria-hidden="true"></i><span>London, Uk</span>   <i class=" fa fa-regular fa-clock"></i><span>11 Hours ago</span>   <i class="fa fa-solid fa-money-bill-wave"></i><span>10-20$</span>     </p>
+                </div>
+    
+                <div class="span_bgwale">
+                    <p class="cardd-description"><span>FullTime</span> <span id="Private">Private</span>  <span id="Urgent">Urgent</span></p>
+                </div>
+      
+            </div>
+        </div>
+  
+  
+  
+  
+  
+            <div class="cardd">
+      
+              <div class="text">
+                  <img src="./soft_eng.png" height="35px" width="35px" alt="">
+                  <pre style="width: 100%;" class="cardd-title">Software Engineer (Android)   </pre> 
+                  <!-- <p><i id="bookmarkid" class="far fa-bookmark"></i></p> -->
+              </div>
+         
+              <div>
+            
+                  <div class="span_currency">
+                      <p class="cardd-description"><i class="fa fa-suitcase"></i><span>Segement</span>   <i class="fa fa-map-marker"aria-hidden="true"></i><span>London, Uk</span>   <i class=" fa fa-regular fa-clock"></i><span>11 Hours ago</span>   <i class="fa fa-solid fa-money-bill-wave"></i><span>10-20$</span>     </p>
+                  </div>
+      
+                  <div class="span_bgwale">
+                      <p class="cardd-description"><span>FullTime</span> <span id="Private">Private</span>  <span id="Urgent">Urgent</span></p>
+                  </div>
+        
+              </div>
+          </div>
+         
+      
+      
+          <div class="btn-jobs">
+            <button class="btn-green">Load More Listing</button>
+          </div>
+        
+        </div>
+  </div>
+  
+  
+  <!--  section 3 ends -->
+
+
+
+ <div class="section4">
+
+  <div class="browse-category">
+    <h1>News Jobs Related</h1>
+</div>
+
+    <section class="section04">
+        <div class="carddd carddd1">
+          <img class="image" src="./ainbgf.jpg" alt="Image 1">
+          <div class="textt">
+            <p id="news_date"><span>August-31-2021</span> 
+            <p id="news_heading">5 Tips For Your Job Interview</p>
+            <p id="news_content">A job you can get by applying these techniques they are </p>
+            <p id="news_link">Read More <i class=" fa fa-solid fa-caret-right"></i></p>
+          </div>
+        </div>
+
+
+        <div class="carddd carddd1">
+          <img class="image" src="./ainbgf.jpg" alt="Image 1">
+          <div class="textt">
+            <p id="news_date"><span>August-31-2021</span> 
+            <p id="news_heading">5 Tips For Your Job Interview</p>
+            <p id="news_content">A job you can get by applying these techniques they are </p>
+            <p id="news_link">Read More <i class=" fa fa-solid fa-caret-right"></i></p>
+          </div>
+        </div>
+      
+        <div class="carddd carddd2">
+          <img class="image" src="./mens.jpg" alt="Image 1">
+          <div class="textt">
+            <p id="news_date"><span>August-31-2021</span> 
+            <p id="news_heading">5 Tips For Your Job Interview</p>
+            <p id="news_content">A job you can get by applying these techniques they are </p>
+            <p id="news_link">Read More <i class=" fa fa-solid fa-caret-right"></i></p>
+          </div>
+        </div>
+      
+        <div class="carddd carddd3">
+          <img class="image" src="./1689155978875.jpg" alt="Image 1">
+          <div class="textt">
+            <p id="news_date"><span>August-31-2021</span> 
+            <p id="news_heading">5 Tips For Your Job Interview</p>
+            <p id="news_content">A job you can get by applying these techniques they are </p>
+            <p id="news_link">Read More <i class=" fa fa-solid fa-caret-right"></i></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn-jobs">
+        <button class="btn-green">Load More Listing</button>
+      </div>
+</div>
+
+
+<!--  section 4 ends -->
+
+
+
+
+
+<div class="section5">
+
+
+
+
+
+
+  <!-- ------------------------- -->
+   
+<footer>
+    <div class="footer-section" >
+      
+        <div class="img-footer">
+            <img src="./logo.png" height="auto" width="200px" alt="">
+        </div>
+
+        <div class="para-footer">
+            <p>Lorem ipsum dolor sit  nam. onsectetur adipisicing elit. Nesciunt animi quia corrupti doloribus suscipit est dolores, voluptas vitae? Mollitia, quisquam!</p>
+        </div>
+      
+
+    </div>
+    <div class="footer-section1" >
+        <h3 class="heading-footer" id="footer-nav">Navigation</h3>
+      <ul>
+        <li> <i class="fa-solid fa-chevron-right"></i>Home</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Jobs</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Candidates</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Partners</li>
+     
+      </ul>
+    </div>
+    <div class="footer-section2" >
+        <h3 class="heading-footer" >Policies</h3>
+      <ul>
+        <li><i class="fa-solid fa-chevron-right"></i>About Us</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Contact Us</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Terms & Conditions</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Privacy Policy</li>
+ 
+      </ul>
+    </div>
+    <div class="footer-section3">
+        <h3 class="heading-footer" >Follow Us</h3>
+      <ul>
+        <li> <i class="fa-solid fa-chevron-right"></i>Blog</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Twitter</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Facebook</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Youtube</li>
+       
+      </ul>
+    </div>
+    <div class="footer-section4">
+        <h3 class="heading-footer" >Popular Jobs</h3>
+      <ul>
+        <li> <i class="fa-solid fa-chevron-right"></i>Web Developer</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Web Designer</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Ux Developer</li>
+        <li> <i class="fa-solid fa-chevron-right"></i>Account Manager</li>
+   
+      </ul>
+    </div>
+  </footer>
+    
+
+
+
+    <!-- ------------------------- -->
+
+
+
+
+
+  
+    
+</div>
+
+
+<!--  section 5 ends -->
+
+    <!-- <div class="section6">
+    </div>
+
+
+    <div class="section7">
+    </div> -->
+  </div>
+
+
+
+
+
+  <!--  -->
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+
+  <!--  -->
+
+</body>
+</html>
