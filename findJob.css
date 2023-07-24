@@ -4,17 +4,21 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body{
+  overflow-x: hidden;
+}
 
 
 
 /* CSS for the card container */
 .cardd-container {
     padding: 20px;
-    width: 73%;
+    width: 74%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    margin-top: 5rem;
   }
   
   /* CSS for the card */
@@ -80,15 +84,15 @@
     margin-bottom: 0.8rem;
   }
   
-  /* CSS for card content */
   .cardd-title {
     padding-left: 2px;
     font-weight: bold;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     font-size: 1.2rem;
   }
   
   .cardd-description {
+  
     color: #ff0000;
   }
   
@@ -97,23 +101,25 @@
     width: 10px;
     font-size: 10px;
     background-color: rgba(160, 223, 255, 0.61);
+    background-color: black;
+    color: white !important;
     padding: 6px 15px;
     border-radius: 50px;
     /* margin-right: 10px; */
+  
   }
   
   
   
   
   #Private {
-    background-color: rgba(255, 233, 192, 0.747);
-    color: orange;
-  
+    /* background-color: rgba(255, 233, 192, 0.747); */
+    /* color: orange; */
+    background-color: orangered;
   }
   
   #Urgent {
-    background-color: rgba(189, 255, 174, 0.76);
-    color: rgb(0, 255, 30);
+    background-color: #00b712;
   }
   
   
@@ -121,10 +127,14 @@
     color: blue;
   }
   
+  .span_currency{
+    margin-bottom: 1rem;
+  }
+  
   .span_currency span {
     /* background-color: chartreuse; */
     /* margin-right: 15px; */
-    font-size: 10px;
+    font-size: 14px;
     word-spacing: 1px;
     margin-left: 2px;
     color: black;
@@ -135,16 +145,43 @@
   
   
   .span_currency i {
-    /* background-color: chartreuse; */
-    /* margin-right: 15px; */
-    font-size: 12px;
+    font-size: 14px;
     margin-right: 2px;
-    /* padding: 4px; */
     padding-left: 2px;
-    color: rgb(0, 47, 0);
+    /* color: rgb(0, 47, 0); */
+    color: #000000;
+  }
   
-    margin-bottom: 1rem;
-  
-    /* justify-content: space-between;   */
-  
+
+  @media screen and (max-width: 834px) {
+    .cardd-container{
+      width: 50%;
+      flex-direction: column;
+    }
+
+    .cardd{
+      width: 90%;
+    }
+
+  }
+
+  @media screen and (max-width: 600px) {
+    .cardd-container{
+      width: 60%;
+    }
+
+    .cardd{
+      width: 100%;
+    }
+
+    .cardd-title{
+      font-size: 1.1rem;
+    }
+
+  }
+
+  @media screen and (max-width: 425px) {
+    .cardd-container{
+      width: 100%;
+    }
   }

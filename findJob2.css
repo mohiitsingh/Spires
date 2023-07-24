@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a:hover {
@@ -28,8 +28,8 @@ select {
 .find-job {
   display: flex;
   gap: 30px;
-  padding-top: 100px;
-  padding-left: 100px;
+  padding-left: 50px;
+  /* background-color: brown; */
 }
 
 /* filter_cardd styles */
@@ -62,7 +62,7 @@ select {
 
 .filter_cardd {
   background-color: #f2f2f2;
-  width: 25%;
+  width: 24%;
   padding: 20px;
   height: max-content;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -182,16 +182,39 @@ select {
   margin-right: 5px;
 }
 
+@media screen and (max-width: 1024px) {
+  .find-job {
+    padding-left: 30px;
+    gap: 20px;
+  }
+
+  .filter_cardd{
+    width: 25% ;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .filter_cardd{
+    width: 40% ;
+  }
+}
+
+
 @media (max-width: 768px) {
+
+  .find-job{
+  /* padding-left: 0px; */
+  }
 
   /* Show the filter button in mobile view */
   .filter_button {
-    display: block;
+    /* display: block; */
   }
 
   /* Hide the filter card container in mobile view */
   .filter_cardd {
-    display: none;
+    /* display: none; */
+    /* width: 70% ; */
   }
 
   /* Full space for the filter menu in mobile view */
@@ -203,7 +226,20 @@ select {
   }
 
   /* Move the cards below the filter menu in mobile view */
-  .cardd-container {
+  /* .cardd-container {
     display: block;
+  } */
+}
+
+@media screen and (max-width: 600px) {
+  .filter_cardd {
+    width: 40%;
+    /* background-color: red; */
   }
+}
+
+@media screen and (max-width: 425px) {
+ .filter_cardd{
+  display: none;
+ }
 }
