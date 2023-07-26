@@ -4,6 +4,10 @@
 font-family: 'Roboto', sans-serif;
 }
 
+button{
+  cursor: pointer;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #333;

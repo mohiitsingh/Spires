@@ -8,6 +8,10 @@ ul,li{
   list-style: none;
 }
 
+button{
+  cursor: pointer;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -433,7 +437,7 @@ span {
 
 .cardd:hover {
   box-shadow: 0 0 5px black;
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
 }
 
 
@@ -699,6 +703,21 @@ li {
   color: orange
 }
 
+.footer-p{
+  border-top: 1px solid black;
+  padding: 0.5rem 0;
+  background-color: whitesmoke;
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+}
+
+.footer-p a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
 
 
 
@@ -774,6 +793,11 @@ li {
   .footer-section4 {
     width: 100%;
   }
+
+  .footer-p{
+    font-size: 0.9rem;
+  }
+
 }
 
 
